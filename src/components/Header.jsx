@@ -32,36 +32,23 @@ const Header = () => {
 
   return (
     <div
-      style={{ border: "10px solid red" }}
       className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
         openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
       }`}
     >
-      <div
-        style={{ border: "10px solid blue" }}
-        className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4"
-      >
-        <a
-          style={{ border: "10px solid green" }}
-          className="block w-[12rem] xl:mr-8"
-          href="#hero"
-        >
+      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+        <a className="block w-[12rem] xl:mr-8" href="#hero">
           <img src={brainwave} width={190} height={40} alt="brainwave" />
         </a>
 
         <nav
-          style={{ border: "10px solid yellow" }}
           className={`${
             openNavigation ? "flex" : "hidden"
           } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
-          <div
-            style={{ border: "10px solid orange" }}
-            className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row"
-          >
+          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
               <a
-                style={{ border: "10px solid purple" }}
                 key={item.id}
                 href={item.url}
                 onClick={handleOpenNavigation}
@@ -81,17 +68,12 @@ const Header = () => {
         </nav>
 
         <a
-          style={{ border: "10px solid pink" }}
           href="#signup"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
           New Account
         </a>
-        <Button
-          style={{ border: "10px solid pink" }}
-          className="hidden lg:flex"
-          px="px-3"
-        >
+        <Button className="hidden lg:flex" px="px-3">
           Sign in
         </Button>
 
